@@ -1,0 +1,34 @@
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+ ----------------------------------------------------------------------------------------*/
+@import "bear_defaults"
+@import "neat"
+
+p, ul, ol, dl, blockquote
+	max-width: $daddy_bear_max_width /* Optimal width for long-form text */
+
+#container
+	max-width: $daddy_bear_max_width
+	
+section
+	@include span-columns(9)
+	@include shift(1.5)
+	@include omega
+
+h1, h2, h3, h4, h5, h6
+	text-align: left
+
+ul.editions
+	text-align: left
+	list-style: disc
+
+#container
+	section:first-child
+		h1:first-child
+			text-align: center
+	
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+ ----------------------------------------------------------------------------------------*/
+@media screen and (min-width: $mummy_bear_max_width) and (max-width: ($daddy_bear_max_width + 2 * $emLeading))
+	#container
+		max-width: $mummy_bear_max_width

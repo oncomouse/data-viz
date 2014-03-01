@@ -1,0 +1,28 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>	  <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>	  <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => "en" }
+	<!--<![endif]-->
+	%head
+		%meta{ :charset => "utf-8" }/
+		
+		-# Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		-# Remove this if you use the .htaccess
+		-# %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+		
+		%title Andrew Pilsch
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+		
+		- # Basic Goldilocks Approach CSS structure
+		= stylesheet_link_tag("global.css", :media => "all", :rel => "stylesheet" )
+		= stylesheet_link_tag("layout.css", :media => "all and (min-width: 33.236em)", :rel => "stylesheet")
+		= stylesheet_link_tag("rainbow.css", :media => "all", :rel => "stylesheet" )
+		
+		= javascript_include_tag("rainbow.min.js")
+	%body
+		#container
+			%section
+				= yield
