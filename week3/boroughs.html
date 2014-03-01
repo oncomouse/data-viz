@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+
+		.boundary {
+		  fill: none;
+		  stroke: #000;
+		  stroke-width: .5px;
+		}
+
+		</style>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+		<script>
+
+		head.load(
+			"//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js",
+			"//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js",
+			function() {
+				var width = 960,
+				    height = 500;
+
+				/*var projection = d3.geo.albers()
+								 .center([0,-73])
+								 .rotate([40,0])
+								 .parallels([-70,-80])
+								 .scale(6000)
+								 .translate([width / 2, height / 2]);*/
+				var projection = d3.geo.mercator()
+				      .center([-73.94, 40.70])
+				      .scale(width * 80)
+				      .translate([(width) / 2, (height)/2]);
+
+				var path = d3.geo.path().projection(projection);
+
+				var svg = d3.select("body").append("svg")
+				    .attr("width", "100%")
+				    .attr("height", "100%");
+
+				d3.json("data/nybb.json", function(error, topology) {
+					svg.append("path")
+				       //.datum(topojson.object(topology, topology.objects['nybb-geo'].geometries))
+					   .datum(topojson.feature(topology, topology.objects.nybb))
+					   .attr("d", path)
+					   //.attr("class", "boundary");
+					console.log(topology);
+	
+				});
+			}
+		);
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
