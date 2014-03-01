@@ -23,7 +23,7 @@
         
         <p>Making GeoJSON is trickier than I thought. I downloaded some .SHP files from <a href="http://www.nyc.gov/html/dcp/html/bytes/dwndistricts.shtml">Bytes of the Big Apple</a>, and converted them to <a href="https://github.com/mbostock/topojson">TopoJSON</a> using <a href="http://bost.ocks.org/mike/map/">every tutorial on the Internet</a>. It did not produce happy results (browser crashes, black boxes, noise, etc.).</p>
         
-        <p>I found another project that on <a href="http://github.com">GitHub</a> that was using the same dataset as I was. I downloaded <a href="https://raw.github.com/abmagil/manhattan/master/manhattan_testbed/public/javascripts/nybb.geojson">their GeoJSON</a>. Comparing my GeoJSON to theirs, I knew something was off with the conversion from the .SHP file. Googling around, I found a <a href="http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/">tutorial on converting Shape files to GeoJSON for GitHub</a>. It turns out ogr2ogr was <a href="/week3/data/nybb_13a/nybb-geo.json">producing wacky coordinates</a> because I wasn’t providing it with the proper projection information (I don’t know exactly what this means; or even if this is totally what is happening). Based on the tutorial, however, the actual command to convert Shape to GeoJSON for D3 is:</p>
+        <p>I found another project that on <a href="http://github.com">GitHub</a> that was using the same dataset as I was. I downloaded <a href="https://raw.github.com/abmagil/manhattan/master/manhattan_testbed/public/javascripts/nybb.geojson">their GeoJSON</a>. Comparing my GeoJSON to theirs, I knew something was off with the conversion from the .SHP file. Googling around, I found a <a href="http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/">tutorial on converting Shape files to GeoJSON for GitHub</a>. It turns out ogr2ogr was <a href="data/nybb_13a/nybb-geo.json">producing wacky coordinates</a> because I wasn’t providing it with the proper projection information (I don’t know exactly what this means; or even if this is totally what is happening). Based on the tutorial, however, the actual command to convert Shape to GeoJSON for D3 is:</p>
         
         <pre><code class="language-shell">$ ogr2ogr -f GeoJSON -t_srs crs:84 [name].geojson [name].shp
         </code></pre>
@@ -38,9 +38,9 @@
         <h2 id="stuff-i-made">Stuff I Made</h2>
         
         <ul>
-          <li>Working with <a href="http://suffenus.wordpress.com/2014/01/07/making-interactive-maps-with-d3-for-total-beginners/">Michael’s tutorial</a>, I made <a href="/week3/us.html">this page</a>.</li>
-          <li>Working through <a href="http://bost.ocks.org/mike/map/">this tutorial</a>, I made <a href="/week3/uk.html">this map of the UK</a>.</li>
-          <li>Finally, on my own, I drew <a href="/week3/boroughs.html">New York City</a>.</li>
+          <li>Working with <a href="http://suffenus.wordpress.com/2014/01/07/making-interactive-maps-with-d3-for-total-beginners/">Michael’s tutorial</a>, I made <a href="us.html">this page</a>.</li>
+          <li>Working through <a href="http://bost.ocks.org/mike/map/">this tutorial</a>, I made <a href="uk.html">this map of the UK</a>.</li>
+          <li>Finally, on my own, I drew <a href="boroughs.html">New York City</a>.</li>
         </ul>
       </section>
     </div>
