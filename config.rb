@@ -11,7 +11,7 @@ set :markdown, :fenced_code_blocks => true,
 
 require "bourbon"
 
-#set :relative_links, true
+set :relative_links, true
 
 # Change Compass configuration
 compass_config do |config|
@@ -59,13 +59,13 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
-  activate :gzip
+  #activate :gzip
   
   # Enable cache buster
   # activate :cache_buster
 
   # Use relative URLs
-  #activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # I wouldn't use this.
