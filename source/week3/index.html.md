@@ -1,3 +1,7 @@
+---
+title: "Data Viz: Week 3 Notes"
+---
+
 # Week 3
 
 ## Making GeoJSON
@@ -26,6 +30,10 @@ Fun times!
 
 There's also this, though:
 
+### NYC Boroughs
+
 <script src="https://embed.github.com/view/geojson/oncomouse/data-viz/master/source/week3/data/nybb.json"></script>
+
+### NYC City Council Districts
 
 <script src="https://embed.github.com/view/geojson/oncomouse/data-viz/master/source/week3/data/nycc.json"></script>

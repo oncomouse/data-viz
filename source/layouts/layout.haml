@@ -13,7 +13,11 @@
 		-# Remove this if you use the .htaccess
 		-# %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
 		
-		%title Andrew Pilsch
+		%title 
+			- if current_page.data.has_key? "title"
+				= current_page.data["title"]
+			- else
+				Middleman Page
 		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
 		
 		- # Basic Goldilocks Approach CSS structure
