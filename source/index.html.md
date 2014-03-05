@@ -9,3 +9,4 @@ This web page constitutes notes, experiments, and other observations from the [I
 ## Notes
 
 * [Week 3](week3/)
+{: .notes}
