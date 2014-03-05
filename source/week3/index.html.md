@@ -42,4 +42,5 @@ There's also this, though:
 
 ## Cool Stuff
 
+
 ![Visualizing the Anthropocene](http://imgs.xkcd.com/comics/land_mammals.png)
