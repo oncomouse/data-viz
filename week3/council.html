@@ -7,16 +7,15 @@
   <!--<![endif]-->
   <head>
     <meta charset='utf-8'>
-    <title>
-      City Council Map of New York
-    </title>
+    <title>City Council Map of NYC</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link href="../stylesheets/libraries/rainbow.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/global.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/layout.css" media="all and (min-width: 33.236em)" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/libraries/hljs.css" media="all" rel="stylesheet" type="text/css" />
     <style>
-      @import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
-      /* line 3, (__TEMPLATE__) */
-      html {
-        font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+      /* line 1, (__TEMPLATE__) */
+      h1, h2, h3, h4, h5, h6 {
+        text-align: center; }
     </style>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" type="text/javascript"></script>
     <script>
@@ -32,19 +31,11 @@
       head.load(
       	"//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js",
       	"//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js",
-      	"../javascripts/rainbow.min.js",
-      	function() {
+      	"../javascripts/hljs.min.js",
+      	function() {					
       		var width = 960,
       		    height = 800;
       
-      		var color_gradient = ["#7900E5", "#8700E4", "#9300E3", "#A000E2", "#AD00E2", "#BA00E1", "#C600E0", "#D300DF", "#DF00DE", "#DE00D0", "#DD00C2", "#DC00B5", "#DC00A7", "#DB009A", "#DA008C", "#D9007F", "#D90072", "#D80064", "#D70057", "#D6004B", "#D6003E", "#D50031", "#D40024", "#D30018", "#D3000B", "#D20000", "#D10D00", "#D01900", "#D02500", "#CF3100", "#CE3D00", "#CD4900", "#CD5500", "#CC6100", "#CB6C00", "#CA7800", "#CA8300", "#C98F00", "#C89A00", "#C7A500", "#C7B000", "#C6BB00", "#C4C500", "#B8C400", "#ACC400", "#A0C300", "#94C200", "#88C100", "#7CC100", "#70C000", "#64BF00", "#59BF00"];
-      
-      		/*var projection = d3.geo.albers()
-      						 .center([0,-73])
-      						 .rotate([40,0])
-      						 .parallels([-70,-80])
-      						 .scale(6000)
-      						 .translate([width / 2, height / 2]);*/
       		var projection = d3.geo.mercator()
       		      .center([-73.94, 40.70])
       		      .scale(width * 80)
@@ -52,7 +43,7 @@
       
       		var path = d3.geo.path().projection(projection);
       
-      		var svg = d3.select("body").append("svg")
+      		var svg = d3.select("#container section").append("svg")
       		    .attr("width", width)
       		    .attr("height", height);
       
@@ -71,5 +62,15 @@
       );
     </script>
   </head>
-  <body></body>
+  <body>
+    <div id='container'>
+      <section>
+        <h1>Map of NYC</h1>
+      </section>
+      <section>
+        <h2>Source Code</h2>
+        <pre><code class="language-javascript">function getRandomColor() {&#x000A;    var letters = '0123456789ABCDEF'.split('');&#x000A;    var color = '#';&#x000A;    for (var i = 0; i &lt; 6; i++ ) {&#x000A;        color += letters[Math.round(Math.random() * 15)];&#x000A;    }&#x000A;    return color;&#x000A;}&#x000A;&#x000A;var width = 960,&#x000A;    height = 800;&#x000A;&#x000A;var projection = d3.geo.mercator()&#x000A;      .center([-73.94, 40.70])&#x000A;      .scale(width * 80)&#x000A;      .translate([(width) / 2, (height)/2]);&#x000A;&#x000A;var path = d3.geo.path().projection(projection);&#x000A;&#x000A;var svg = d3.select("#container section").append("svg")&#x000A;    .attr("width", width)&#x000A;    .attr("height", height);&#x000A;&#x000A;d3.json("data/nycc.json", function(error, topology) {&#x000A;	var subunits = topojson.feature(topology, topology.objects.nycc).features;&#x000A;	svg.selectAll(".subunit")&#x000A;		.data(subunits)&#x000A;		.enter().append("path")&#x000A;		.attr("class", function(d) { return "subunit " + d.id; })&#x000A;	    .attr("d", path)&#x000A;		.style("fill", function(d) { return getRandomColor();})&#x000A;		.style("opacity", "0.8");&#x000A; &#x000A;});&#x000A;</code></pre>
+      </section>
+    </div>
+  </body>
 </html>
