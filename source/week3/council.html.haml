@@ -18,22 +18,14 @@ layout: false
 		-# Remove this if you use the .htaccess
 		-# %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
 		
-		%title 
-			- if current_page.data.has_key? "title"
-				= current_page.data["title"]
-			- else
-				Middleman Page
+		%title City Council Map of NYC
 		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
-		
-		- # Basic Goldilocks Approach CSS structure
-		= stylesheet_link_tag("libraries/rainbow.css", :media => "all", :rel => "stylesheet" )
-		
+		= stylesheet_link_tag("global.css", :media => "all", :rel => "stylesheet" )
+		= stylesheet_link_tag("layout.css", :media => "all and (min-width: 33.236em)", :rel => "stylesheet")
+		= stylesheet_link_tag("libraries/hljs.css", :media => "all", :rel => "stylesheet" )
 		:sass
-			@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic)
-			
-			html
-				font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif
-		
+			h1,h2,h3,h4,h5,h6
+				text-align: center
 		= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"
 		:javascript
 			function getRandomColor() {
@@ -48,19 +40,14 @@ layout: false
 			head.load(
 				"//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js",
 				"//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js",
-				"#{javascript_path("rainbow.min.js")}",
+				"#{javascript_path("hljs.min.js")}",
 				function() {
+					
+					hljs.initHighlightingOnLoad();
+					
 					var width = 960,
 					    height = 800;
 
-					var color_gradient = ["#7900E5", "#8700E4", "#9300E3", "#A000E2", "#AD00E2", "#BA00E1", "#C600E0", "#D300DF", "#DF00DE", "#DE00D0", "#DD00C2", "#DC00B5", "#DC00A7", "#DB009A", "#DA008C", "#D9007F", "#D90072", "#D80064", "#D70057", "#D6004B", "#D6003E", "#D50031", "#D40024", "#D30018", "#D3000B", "#D20000", "#D10D00", "#D01900", "#D02500", "#CF3100", "#CE3D00", "#CD4900", "#CD5500", "#CC6100", "#CB6C00", "#CA7800", "#CA8300", "#C98F00", "#C89A00", "#C7A500", "#C7B000", "#C6BB00", "#C4C500", "#B8C400", "#ACC400", "#A0C300", "#94C200", "#88C100", "#7CC100", "#70C000", "#64BF00", "#59BF00"];
-
-					/*var projection = d3.geo.albers()
-									 .center([0,-73])
-									 .rotate([40,0])
-									 .parallels([-70,-80])
-									 .scale(6000)
-									 .translate([width / 2, height / 2]);*/
 					var projection = d3.geo.mercator()
 					      .center([-73.94, 40.70])
 					      .scale(width * 80)
@@ -68,7 +55,7 @@ layout: false
 
 					var path = d3.geo.path().projection(projection);
 
-					var svg = d3.select("body").append("svg")
+					var svg = d3.select("#container section").append("svg")
 					    .attr("width", width)
 					    .attr("height", height);
 
@@ -87,4 +74,45 @@ layout: false
 			);
 
 	%body
-				
+		#container
+			%section
+				%h1 Map of NYC
+			%section
+				%h2 Source Code
+				:markdown
+					~~~ javascript
+					function getRandomColor() {
+					    var letters = '0123456789ABCDEF'.split('');
+					    var color = '#';
+					    for (var i = 0; i < 6; i++ ) {
+					        color += letters[Math.round(Math.random() * 15)];
+					    }
+					    return color;
+					}
+					
+					var width = 960,
+					    height = 800;
+
+					var projection = d3.geo.mercator()
+					      .center([-73.94, 40.70])
+					      .scale(width * 80)
+					      .translate([(width) / 2, (height)/2]);
+
+					var path = d3.geo.path().projection(projection);
+
+					var svg = d3.select("#container section").append("svg")
+					    .attr("width", width)
+					    .attr("height", height);
+
+					d3.json("data/nycc.json", function(error, topology) {
+						var subunits = topojson.feature(topology, topology.objects.nycc).features;
+						svg.selectAll(".subunit")
+							.data(subunits)
+							.enter().append("path")
+							.attr("class", function(d) { return "subunit " + d.id; })
+						    .attr("d", path)
+							.style("fill", function(d) { return getRandomColor();})
+							.style("opacity", "0.8");
+					 
+					});
+					~~~
