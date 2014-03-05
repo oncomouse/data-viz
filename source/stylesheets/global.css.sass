@@ -33,8 +33,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit
 	vertical-align: baseline
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
-	display: block
+@import "libraries/normalize"
 	
 /* 2. ROOT
  ----------------------------------------------------------------------------------------*/
@@ -54,31 +53,48 @@ img, embed, object, video
 
 /* 3. CORE TYPOGRAPHY
  ----------------------------------------------------------------------------------------*/
+@import "libraries/typebase"
+
 body 
 	font-family: $body_font_family	
-
-small
-	font-size: 80% 
-
-@import "typebase"
 	
 h1, h2, h3, h4, h5, h6
 	font-family: $header_font_family
 
+
 /* 4. LINKS
  ----------------------------------------------------------------------------------------*/
-a
-	@include transition(border .2s ease-out, color .2s ease-out, background-color .2s ease-out)
+a, a:visited
 	outline: none
-	color: $accent_color
-	text-decoration: underline	 
-a:hover
-	color: $inverse_accent_color
+	color: $link_base_color
+	text-decoration: underline	
+	@include transition(color .2s ease-out, background-color .2s ease-out) 
+
+	&:hover
+		outline: none
+		color: $link_hover_color
+		text-decoration: none
+
+	&:active, &:focus
+		outline: none 
+	&:active
+		position: relative
+		top: 2px
 
 /* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
  ----------------------------------------------------------------------------------------*/
+html
+	background: $background_color
+	color: $font_color
+
+
 #container
 	@include outer-container
+
+.notes
+	li
+		font-size: 1.15 * $scale * 1rem
+		line-height: 1.15 * $leading
 
 /* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
  ----------------------------------------------------------------------------------------*/

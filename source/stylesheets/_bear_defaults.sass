@@ -1,7 +1,27 @@
+/*
+ * 3bears SASS template
+ *
+ * A starting place for building modern, responsive website using the following techniques:
+ *
+ * - Goldilocks Approach (http://goldilocksapproach.com/), Responsive CSS framework (ported to SASS)
+ * - Bourbon SASS (http://bourbon.io), SASS mixin library
+ * - Bourbon Neat (http://neat.bourbon.io), SASS responsive grids
+ * - normalize.css (http://necolas.github.io/normalize.css/), CSS consistency (ported to SASS)
+ * - typebase.css (http://devinhunt.github.io/typebase.css/), CSS font starters
+ * - sass-color-palettes (https://github.com/FearMediocrity/sass-color-palettes), SASS color definitions
+ * - animate.css (http://daneden.github.io/animate.css/), CSS animations (ported to SASS)
+ *
+ */
+
+// Load Bourbon & Neat:
 @import "bourbon"
 @import "neat"
 
-@import colors
-@import sizes
-@import "webfonts"
-@import fonts
+// Load our modular settings files:
+
+// Controls document colors:
+@import "settings/colors"
+// Controls font face and size:
+@import "settings/fonts"
+// Controls Goldilocks breakpoints:
+@import "settings/sizes"
