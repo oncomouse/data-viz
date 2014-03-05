@@ -4,6 +4,8 @@ title: "Data Viz: Week 3 Notes"
 
 # Week 3
 
+**[<< Back to Main Page](..)**
+
 ## Making GeoJSON
 
 Making GeoJSON is trickier than I thought. I downloaded some .SHP files from [Bytes of the Big Apple](http://www.nyc.gov/html/dcp/html/bytes/dwndistricts.shtml), and converted them to [TopoJSON](https://github.com/mbostock/topojson) using [every tutorial on the Internet](http://bost.ocks.org/mike/map/). It did not produce happy results (browser crashes, black boxes, noise, etc.).
@@ -37,3 +39,7 @@ There's also this, though:
 ### NYC City Council Districts
 
 <script src="https://embed.github.com/view/geojson/oncomouse/data-viz/master/source/week3/data/nycc.json"></script>
+
+## Cool Stuff
+
+![Visualizing the Anthropocene](http://imgs.xkcd.com/comics/land_mammals.png)
