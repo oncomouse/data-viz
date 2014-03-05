@@ -1,1 +1,67 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}p,ul,ol,dl,blockquote{max-width:60em}#container{max-width:60em}section{float:left;display:block;margin-right:2.35765%;width:74.41059%;margin-left:12.79471%;margin-right:0}section:last-child{margin-right:0}h1,h2,h3,h4,h5,h6{text-align:left}ul.editions{text-align:left;list-style:disc}#container section:first-child h1:first-child{text-align:center}@media screen and (min-width: 30em) and (max-width: 63.5em){#container{max-width:30em}}
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+ * ---------------------------------------------------------------------------------------- */
+/* 3bears SASS template
+ *
+ * A starting place for building modern, responsive website using the following techniques:
+ *
+ * - Goldilocks Approach (http://goldilocksapproach.com/), Responsive CSS framework (ported to SASS)
+ * - Bourbon SASS (http://bourbon.io), SASS mixin library
+ * - Bourbon Neat (http://neat.bourbon.io), SASS responsive grids
+ * - normalize.css (http://necolas.github.io/normalize.css/), CSS consistency (ported to SASS)
+ * - typebase.css (http://devinhunt.github.io/typebase.css/), CSS font starters
+ * - sass-color-palettes (https://github.com/FearMediocrity/sass-color-palettes), SASS color definitions
+ * - animate.css (http://daneden.github.io/animate.css/), CSS animations (ported to SASS)
+ *
+ */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
+/* line 2, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 2, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 7, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+p, ul, ol, dl, blockquote {
+  max-width: 60em; }
+
+/* line 10, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+#container {
+  max-width: 60em; }
+
+/* line 13, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+section {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-left: 12.79471%;
+  margin-right: 0; }
+  /* line 40, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  section:last-child {
+    margin-right: 0; }
+
+/* line 18, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+h1, h2, h3, h4, h5, h6 {
+  text-align: left; }
+
+/* line 21, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+ul.editions {
+  text-align: left;
+  list-style: disc; }
+
+/* line 27, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+#container section:first-child h1:first-child {
+  text-align: center; }
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+ * ---------------------------------------------------------------------------------------- */
+@media screen and (min-width: 30em) and (max-width: 63.5em) {
+  /* line 34, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/layout.css.sass */
+  #container {
+    max-width: 30em; } }

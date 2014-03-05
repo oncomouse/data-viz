@@ -1,1 +1,642 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}/*! normalize.css v3.0.0 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:yellow;color:black}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{overflow-y:scroll;background:white}img,embed,object,video{max-width:100%}.ie6 img.full,.ie6 object.full,.ie6 embed,.ie6 video{width:100%}/*! Typebase.less v0.1.0 | MIT License */html{font-family:serif;font-size:112.5%;-webkit-font-smoothing:antialiased}p{line-height:1.75rem;margin-top:1.75rem;margin-bottom:0}pre{margin-top:1.75rem !important}ul,ol{margin-top:1.75rem;margin-bottom:1.75rem}ul li,ol li{line-height:1.75rem}ul ul,ul ol,ol ul,ol ol{margin-top:0;margin-bottom:0}blockquote{line-height:1.75rem;margin-top:1.75rem;margin-bottom:1.75rem}h1,h2,h3,h4,h5,h6{font-family:sans-serif;font-weight:bold;margin-top:1.75rem;margin-bottom:0;line-height:1.75rem}h1{font-size:3.75rem;line-height:5.25rem;margin-top:3.5rem}h2{font-size:2.5rem;line-height:3.5rem;margin-top:3.5rem}h3{font-size:1.25rem}h4{font-size:0.625rem}h5{font-size:0.41667rem}h6{font-size:0.3125rem}table{margin-top:1.75rem;border-spacing:0px;border-collapse:collapse}table td,table th{padding:0;line-height:31.5px}code{vertical-align:bottom}.lead{font-size:1.25rem}.hug{margin-top:0}body{font-family:"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6{font-family:"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif}a,a:visited{outline:none;color:#0076a3;text-decoration:underline;-webkit-transition:color 0.2s ease-out, background-color 0.2s ease-out;-moz-transition:color 0.2s ease-out, background-color 0.2s ease-out;transition:color 0.2s ease-out, background-color 0.2s ease-out}a:hover,a:visited:hover{outline:none;color:#ff895c;text-decoration:none}a:active,a:focus,a:visited:active,a:visited:focus{outline:none}a:active,a:visited:active{position:relative;top:2px}html{background:white;color:black}#container{*zoom:1;max-width:68em;margin-left:auto;margin-right:auto}#container:before,#container:after{content:" ";display:table}#container:after{clear:both}.notes li{font-size:1.4375rem;line-height:2.0125rem}p,ul,ol,dl,blockquote{max-width:30em}#container{padding:0.875rem;max-width:30em;margin:auto}h1,h2,h3,h4,h5,h6{text-align:center}ul.editions{list-style:none;text-align:center}.cf{*zoom:1}.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
+/* Goldilocks Approach to Responsive Web Design Boilerplate
+ *
+ * Author: Design by Front - @designbyfront
+ * Version: 0.1
+ * URL: http://www.goldilocksapproach.com
+ * ----------------------------------------------------------------------------------------
+ *
+ * CONTENTS - GLOBAL.CSS
+ * -----------------------------------------
+ * 1. RESET
+ * 2. ROOT
+ * 3. CORE TYPOGRAPHY
+ * 4. LINKS
+ * 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+ * 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+ * 7. BROWSER AND NON-SEMANTIC STYLING
+ *
+ * CONTENTS - LAYOUT.CSS
+ * -----------------------------------------
+ * 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+ * 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+ *
+ */
+/* 1. RESET
+ * ---------------------------------------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
+/* line 29, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 10, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/*
+ * Remove default margin.
+ */
+/* line 19, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+ * ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 29, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 48, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 60, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 69, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+ * ========================================================================== */
+/*
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 80, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+a {
+  background: transparent; }
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 87, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+ * ========================================================================== */
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 98, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 105, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 113, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+dfn {
+  font-style: italic; }
+
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 121, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+/* line 129, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+mark {
+  background: yellow;
+  color: black; }
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 137, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 144, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 151, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+sup {
+  top: -0.5em; }
+
+/* line 154, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+ * ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 164, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+img {
+  border: 0; }
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 171, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+ * ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 181, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+figure {
+  margin: 1em 40px; }
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+/* line 188, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/*
+ * Contain overflow in all browsers.
+ */
+/* line 197, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+pre {
+  overflow: auto; }
+
+/*
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 204, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+ * ========================================================================== */
+/*
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/*
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 226, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/*
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+/* line 239, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+button {
+  overflow: visible; }
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 249, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+button,
+select {
+  text-transform: none; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 261, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 272, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 280, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 290, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+input {
+  line-height: normal; }
+
+/*
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 301, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/*
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 312, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 322, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/*
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 334, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 342, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 352, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+legend {
+  border: 0;
+  padding: 0; }
+
+/*
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+/* line 360, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+textarea {
+  overflow: auto; }
+
+/*
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 368, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+ * ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 378, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 382, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_normalize.sass */
+td,
+th {
+  padding: 0; }
+
+/* 2. ROOT
+ * ---------------------------------------------------------------------------------------- */
+/* 3bears SASS template
+ *
+ * A starting place for building modern, responsive website using the following techniques:
+ *
+ * - Goldilocks Approach (http://goldilocksapproach.com/), Responsive CSS framework (ported to SASS)
+ * - Bourbon SASS (http://bourbon.io), SASS mixin library
+ * - Bourbon Neat (http://neat.bourbon.io), SASS responsive grids
+ * - normalize.css (http://necolas.github.io/normalize.css/), CSS consistency (ported to SASS)
+ * - typebase.css (http://devinhunt.github.io/typebase.css/), CSS font starters
+ * - sass-color-palettes (https://github.com/FearMediocrity/sass-color-palettes), SASS color definitions
+ * - animate.css (http://daneden.github.io/animate.css/), CSS animations (ported to SASS)
+ *
+ */
+/* line 2, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 43, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+html {
+  overflow-y: scroll;
+  background: white; }
+
+/* /ht Ethan Marcotte - http: //front.ie/l8rJaA */
+/* line 49, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+img, embed, object, video {
+  max-width: 100%; }
+
+/* line 51, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video {
+  width: 100%; }
+
+/* 3. CORE TYPOGRAPHY
+ * ---------------------------------------------------------------------------------------- */
+/*! Typebase.less v0.1.0 | MIT License */
+/* Setup */
+/* line 5, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+html {
+  /* Change default typefaces here */
+  font-family: serif;
+  font-size: 112.5%;
+  -webkit-font-smoothing: antialiased; }
+
+/* Copy & Lists */
+/* line 20, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+p {
+  line-height: 1.75rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0; }
+
+/* line 25, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+pre {
+  margin-top: 1.75rem !important; }
+
+/* line 28, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+ul, ol {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem; }
+  /* line 31, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+  ul li, ol li {
+    line-height: 1.75rem; }
+  /* line 33, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+  ul ul, ul ol, ol ul, ol ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+/* line 37, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+blockquote {
+  line-height: 1.75rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem; }
+
+/* Headings */
+/* line 43, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h1, h2, h3, h4, h5, h6 {
+  /* Change heading typefaces here */
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+  line-height: 1.75rem; }
+
+/* line 51, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h1 {
+  font-size: 3.75rem;
+  line-height: 5.25rem;
+  margin-top: 3.5rem; }
+
+/* line 55, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-top: 3.5rem; }
+
+/* line 59, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h3 {
+  font-size: 1.25rem; }
+
+/* line 61, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h4 {
+  font-size: 0.625rem; }
+
+/* line 63, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h5 {
+  font-size: 0.41667rem; }
+
+/* line 65, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+h6 {
+  font-size: 0.3125rem; }
+
+/* Tables */
+/* line 69, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+table {
+  margin-top: 1.75rem;
+  border-spacing: 0px;
+  border-collapse: collapse; }
+  /* line 74, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+  table td, table th {
+    padding: 0;
+    line-height: 31.5px; }
+
+/* Code blocks */
+/* line 79, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+code {
+  vertical-align: bottom; }
+
+/* Leading paragraph text */
+/* line 84, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+.lead {
+  font-size: 1.25rem; }
+
+/* Hug a the block above you */
+/* line 88, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+.hug {
+  margin-top: 0; }
+
+/* line 59, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 62, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* 4. LINKS
+ * ---------------------------------------------------------------------------------------- */
+/* line 68, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+a, a:visited {
+  outline: none;
+  color: #0076a3;
+  text-decoration: underline;
+  -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out; }
+  /* line 74, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+  a:hover, a:visited:hover {
+    outline: none;
+    color: #ff895c;
+    text-decoration: none; }
+  /* line 79, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+  a:active, a:focus, a:visited:active, a:visited:focus {
+    outline: none; }
+  /* line 81, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+  a:active, a:visited:active {
+    position: relative;
+    top: 2px; }
+
+/* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+ * ---------------------------------------------------------------------------------------- */
+/* line 87, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+html {
+  background: white;
+  color: black; }
+
+/* line 92, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+#container {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 18, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #container:before, #container:after {
+    content: " ";
+    display: table; }
+  /* line 23, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  #container:after {
+    clear: both; }
+
+/* line 96, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+.notes li {
+  font-size: 1.4375rem;
+  line-height: 2.0125rem; }
+
+/* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+ * ---------------------------------------------------------------------------------------- */
+/* line 103, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+p, ul, ol, dl, blockquote {
+  max-width: 30em; }
+
+/* line 106, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+#container {
+  padding: 0.875rem;
+  max-width: 30em;
+  margin: auto; }
+
+/* line 112, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center; }
+
+/* line 115, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+ul.editions {
+  list-style: none;
+  text-align: center; }
+
+/* 7. BROWSER AND NON-SEMANTIC STYLING
+ * ---------------------------------------------------------------------------------------- */
+/* line 121, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+.cf {
+  *zoom: 1; }
+  /* line 18, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .cf:before, .cf:after {
+    content: " ";
+    display: table; }
+  /* line 23, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .cf:after {
+    clear: both; }
