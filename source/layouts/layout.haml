@@ -23,10 +23,13 @@
 		- # Basic Goldilocks Approach CSS structure
 		= stylesheet_link_tag("global.css", :media => "all", :rel => "stylesheet" )
 		= stylesheet_link_tag("layout.css", :media => "all and (min-width: 33.236em)", :rel => "stylesheet")
-		= stylesheet_link_tag("libraries/rainbow.css", :media => "all", :rel => "stylesheet" )
+		= stylesheet_link_tag("libraries/hljs.css", :media => "all", :rel => "stylesheet" )
 		
-		= javascript_include_tag("rainbow.min.js")
+		= javascript_include_tag("hljs.min.js")
 	%body
 		#container
 			%section
 				= yield
+		:javascript
+			//hljs.configure({classPrefix: ''});
+			hljs.initHighlightingOnLoad();
