@@ -26,7 +26,8 @@ Fun times!
 
 ## Stuff I Made
 
-* Working with [Michael's tutorial](http://suffenus.wordpress.com/2014/01/07/making-interactive-maps-with-d3-for-total-beginners/), I made [this page](us.html).
+* Working with [Michael's tutorial](http://suffenus.wordpress.com/2014/01/07/making-interactive-maps-with-d3-for-total-beginners/), I made [this page](us.html)
+	* Then I learned how to use ```d3.behavior.zoom()``` to make it zoom.
 * Working through [this tutorial](http://bost.ocks.org/mike/map/), I made [this map of the UK](uk.html).
 * Finally, on my own, I drew [New York City](boroughs.html), in [two ways](council.html).
 
