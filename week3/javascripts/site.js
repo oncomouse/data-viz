@@ -5,6 +5,7 @@ var color_domain = [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5
 var ext_color_domain = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000]
 var legend_labels = ["< 500", "500+", "1000+", "1500+", "2000+", "2500+", "3000+", "3500+", "4000+", "4500+", "5000+", "5500+", "6000+"]
  
+var zoom_max_scale = 3;
 var color = d3.scale.threshold()
      .domain(color_domain)
      .range(["#dcdcdc", "#d0d6cd", "#bdc9be", "#aabdaf", "#97b0a0", "#84a491", "#719782", "#5e8b73", "#4b7e64", "#387255", "#256546", "#125937", "#004d28"]);
@@ -34,7 +35,7 @@ function ready(error, us, data) {
     var zoom = d3.behavior.zoom()
 		.translate([0, 0])
 		.scale(1)
-		.scaleExtent([1, 2])
+		.scaleExtent([1, zoom_max_scale])
 		.on("zoom", zoomed);
 
 	var features = svg.append("g");
