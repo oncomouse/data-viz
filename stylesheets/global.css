@@ -478,16 +478,17 @@ ul, ol {
   /* line 33, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
   ul ul, ul ol, ol ul, ol ol {
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-left: 1.5rem; }
 
-/* line 37, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 38, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 blockquote {
   line-height: 1.75rem;
   margin-top: 1.75rem;
   margin-bottom: 1.75rem; }
 
 /* Headings */
-/* line 43, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 44, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h1, h2, h3, h4, h5, h6 {
   /* Change heading typefaces here */
   font-family: sans-serif;
@@ -496,57 +497,57 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   line-height: 1.75rem; }
 
-/* line 51, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 52, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h1 {
   font-size: 3.75rem;
   line-height: 5.25rem;
   margin-top: 3.5rem; }
 
-/* line 55, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 56, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h2 {
   font-size: 2.5rem;
   line-height: 3.5rem;
   margin-top: 3.5rem; }
 
-/* line 59, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 60, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h3 {
   font-size: 1.25rem; }
 
-/* line 61, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 62, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h4 {
   font-size: 0.625rem; }
 
-/* line 63, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 64, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h5 {
   font-size: 0.41667rem; }
 
-/* line 65, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 66, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 h6 {
   font-size: 0.3125rem; }
 
 /* Tables */
-/* line 69, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 70, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 table {
   margin-top: 1.75rem;
   border-spacing: 0px;
   border-collapse: collapse; }
-  /* line 74, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+  /* line 75, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
   table td, table th {
     padding: 0;
     line-height: 31.5px; }
 
 /* Code blocks */
-/* line 79, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 80, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 code {
   vertical-align: bottom; }
 
 /* Leading paragraph text */
-/* line 84, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 85, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 .lead {
   font-size: 1.25rem; }
 
 /* Hug a the block above you */
-/* line 88, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
+/* line 89, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/libraries/_typebase.sass */
 .hug {
   margin-top: 0; }
 
@@ -623,14 +624,9 @@ p, ul, ol, dl, blockquote {
 h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
-/* line 115, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
-ul.editions {
-  list-style: none;
-  text-align: center; }
-
 /* 7. BROWSER AND NON-SEMANTIC STYLING
  * ---------------------------------------------------------------------------------------- */
-/* line 121, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
+/* line 117, /Users/andrew/Desktop/Software/Projects/data-viz/source/stylesheets/global.css.sass */
 .cf {
   *zoom: 1; }
   /* line 18, /Users/andrew/.rvm/gems/ruby-1.9.3-p286/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
