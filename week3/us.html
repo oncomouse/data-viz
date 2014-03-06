@@ -3,45 +3,54 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Independent Farms by County - Choropleth</title>
-		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
-		<script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
-		<style>
+		<style> 
+			path {
+				stroke:#000;
+				stroke-width: 1px;
+			}
  
-		path {
-			stroke:#000;
-			stroke-width: 1px;
-		}
+			body {
+				font-family: Arial, sans-serif;
+			}
  
-		body {
-			font-family: Arial, sans-serif;
-		}
+			.city {
+				font: 10px sans-serif;
+				font-weight: bold;
+			}
  
-		.city {
-			font: 10px sans-serif;
-			font-weight: bold;
-		}
+			.legend {
+				font-size: 12px;
+			}
  
-		.legend {
-			font-size: 12px;
-		}
- 
-		div.tooltip {
-			position: absolute;
-			text-align: center;
-			width: 150px;
-			height: 25px;
-			padding: 2px;
-			font-size: 10px;
-			background: #FFFFE0;
-			border: 1px;
-			border-radius: 8px;
-			pointer-events: none;
-		}
+			div.tooltip {
+				position: absolute;
+				text-align: center;
+				width: 150px;
+				height: 25px;
+				padding: 2px;
+				font-size: 10px;
+				background: #FFFFE0;
+				border: 1px;
+				border-radius: 8px;
+				pointer-events: none;
+			}
+		
+			.overlay {
+			  fill: none;
+			  pointer-events: all;
+			}
 		</style>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			head.load(
+				"http://d3js.org/d3.v3.min.js",
+				"http://d3js.org/queue.v1.min.js",
+				"http://d3js.org/topojson.v1.min.js",
+				"javascripts/site.js"
+			);
+		</script>
 	</head>
 	<body>
 		<h1>Independent Farms in the USA</h1>
-		 <script type="text/javascript" src="javascripts/site.js"></script>
 	</body>
 </html>
