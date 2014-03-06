@@ -77,7 +77,7 @@ function ready(error, us, data) {
 		 */
 		function zoomed() {
 			features.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-			if (d3.event.scale == 2) { // Don't attach this event unless we've zoomed all the way in.
+			if (d3.event.scale == zoom.scaleExtent()[1]) { // Don't attach this event unless we've zoomed all the way in.
 				features.on("dblclick", function(d) {
 					d3.event.stopPropagation();
 					zoom.scale(1)
