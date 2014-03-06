@@ -25,7 +25,7 @@ queue()
 	.defer(d3.csv, "data/data.csv")
 	.await(ready);
 
-var features = svg.append("g");
+
 
 function ready(error, us, data) {
 	var pairRateWithId = {};
@@ -37,6 +37,8 @@ function ready(error, us, data) {
 		.scaleExtent([1, 2])
 		.on("zoom", zoomed);
 
+	var features = svg.append("g");
+		
 	data.forEach(function(d) {
 		pairRateWithId[d.id] = +d.rate;
 		pairNameWithId[d.id] = d.name;
